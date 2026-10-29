@@ -549,7 +549,8 @@ and the hardware verification checklist.
 
 Experimental port of FoloToy's ESP32-C3 wearable, tested with ESP-IDF 6.0.1.
 Supports the display, buttons, BLE/Wi-Fi pairing, voice notes, text replies
-(with `CONFIG_MUSE_CJK_FONT` for Chinese and Japanese) and the battery gauge.
+(with `CONFIG_MUSE_CJK_FONT` for Chinese, Japanese and Korean) and the
+battery gauge.
 
 - The three buttons on the right edge share one ADC ladder on GPIO0. Hold
   **OK** (the bottom one) to talk; it also confirms pairing. **DOWN** opens

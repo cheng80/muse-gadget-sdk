@@ -223,8 +223,9 @@ muse_text_cjk_t muse_text_cjk(const char *s)
             return MUSE_TEXT_CJK_CLOSE;
         }
     }
-    bool cjk = (cp >= 0x2E80 && cp <= 0x9FFF)      /* radicals, punctuation, kana, ideographs */
-               || (cp >= 0xAC00 && cp <= 0xD7AF)   /* Hangul */
+    bool cjk = (cp >= 0x1100 && cp <= 0x11FF)      /* Hangul jamo */
+               || (cp >= 0x2E80 && cp <= 0x9FFF)   /* radicals, punctuation, kana, ideographs */
+               || (cp >= 0xAC00 && cp <= 0xD7AF)   /* Hangul syllables */
                || (cp >= 0xF900 && cp <= 0xFAFF)   /* compatibility ideographs */
                || (cp >= 0xFF00 && cp <= 0xFFEF);  /* fullwidth forms */
     return cjk ? MUSE_TEXT_CJK : MUSE_TEXT_NOT_CJK;
