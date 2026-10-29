@@ -66,6 +66,8 @@ static const struct {
     { 0x02BC, "'" },     /* modifier apostrophe */
     { 0x02C6, "^" },
     { 0x02DC, "~" },
+    { 0x115F, "" },      /* Hangul fillers, blank but boxes in the CJK font */
+    { 0x1160, "" },
     { 0x2010, "-" },     /* hyphen */
     { 0x2011, "-" },     /* non-breaking hyphen */
     { 0x2012, "-" },     /* figure dash */
@@ -123,7 +125,9 @@ static const struct {
     { 0x2714, "v" },
     { 0x2717, "x" },
     { 0x2718, "x" },
+    { 0x3164, "" },      /* Hangul filler */
     { 0xFEFF, "" },      /* byte order mark */
+    { 0xFFA0, "" },      /* halfwidth Hangul filler */
 };
 
 /* U+00C0-017F by their plain letter; '_' where STAND_INS has two. */

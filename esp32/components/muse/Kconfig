@@ -229,9 +229,9 @@ menu "Muse"
             punctuation, kana, the CJK Unified Ideographs, fullwidth forms,
             Hangul jamo and Hangul syllables that the ASCII caption font
             lacks. Small screens, whose captions are two lines of 8 px
-            text, show a reply with CJK in it
-            one 16 px line at a time. Adds about 1.2 MB of read-only font
-            data. Without it those characters show as boxes.
+            text, show a reply with CJK in it one 16 px line at a time.
+            Takes about 1.2 MB of flash and no RAM. Without it those
+            characters show as boxes.
 
     config MUSE_CJK_FONT_NOTO
         bool "Draw CJK captions with Noto Sans SC instead of Unifont"

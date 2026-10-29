@@ -124,13 +124,17 @@ class CaptionWrapTest(unittest.TestCase):
     def test_hangul_takes_the_cjk_font_and_page(self) -> None:
         for text in (
             "\u1100",                                       # a lone leading jamo, as the font draws it
-            unicodedata.normalize("NFD", "안녕하세요"),   # conjoining jamo
+            unicodedata.normalize("NFD", "안녕하세요"),   # conjoining jamo, drawn uncomposed
             "안녕하세요",                                  # syllables
             "ㅎㅎ",                                        # compatibility jamo
             "Muse 안녕",
         ):
             self.assertEqual(self.page(text), "cjk cjk", repr(text))
         self.assertEqual(self.page("hello there"), "latin latin")
+
+    def test_hangul_fillers_are_dropped(self) -> None:
+        # Blank characters that the CJK font draws as boxes.
+        self.assertEqual(self.shown("\u115f\u1160\u3164한\uffa0글"), "한글")
 
     def shown(self, text: str) -> str:
         proc = subprocess.run(

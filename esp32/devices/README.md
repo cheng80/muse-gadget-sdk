@@ -155,8 +155,8 @@ no power. Progress is a bar along the bottom edge, as on Muse's square panels.
 The AI button starts a voice note and confirms pairing; touch swipes to
 Settings and confirms pairing too. Up/Down only wake the screen. There is no
 speaker: replies are text on screen. Text uses the LVGL UI's fonts, drawn from
-their TTFs, and Muse's Chinese/Japanese CJK caption font. The
-microSD slot is off by default (`CONFIG_MUSE_STICKY_SD`):
+their TTFs, and Muse's CJK caption font for Chinese, Japanese and Korean.
+The microSD slot is off by default (`CONFIG_MUSE_STICKY_SD`):
 turned on, an inserted card is mounted at `/sdcard` without formatting, though
 nothing reads it yet. The SHT40 on
 I2C1 answers `sensors.read` with an uncalibrated 0 °C temperature offset.
